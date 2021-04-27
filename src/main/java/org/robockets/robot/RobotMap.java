@@ -13,6 +13,8 @@ public class RobotMap {
 	public static Victor shooterBack = new Victor(3);
 
 	public static Solenoid shooterPusher = new Solenoid(0);
+	public static Solenoid lowHeightSolenoid = new Solenoid(1);
+	public static Solenoid highHeightSolenoid = new Solenoid(2);
 
 	public static DifferentialDrive robotDrive = new DifferentialDrive(leftMotorController, rightMotorController);
 }

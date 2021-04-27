@@ -22,4 +22,24 @@ public class Shooter extends Subsystem {
 		RobotMap.shooterPusher.set(false);
 	}
 
+	public void setHeight(Height height) {
+		switch (height) {
+			case BOTTOM:
+				RobotMap.lowHeightSolenoid.set(false);
+				RobotMap.highHeightSolenoid.set(false);
+				break;
+			case LOW:
+				RobotMap.lowHeightSolenoid.set(true);
+				RobotMap.highHeightSolenoid.set(false);
+				break;
+			case HIGH:
+				RobotMap.lowHeightSolenoid.set(false);
+				RobotMap.highHeightSolenoid.set(true);
+				break;
+			default:
+				RobotMap.lowHeightSolenoid.set(false);
+				RobotMap.highHeightSolenoid.set(false);
+		}
+	}
+
 }
