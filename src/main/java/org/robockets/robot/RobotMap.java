@@ -1,5 +1,6 @@
 package org.robockets.robot;
 
+import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.Victor;
@@ -13,8 +14,7 @@ public class RobotMap {
 	public static Victor shooterBack = new Victor(3);
 
 	public static Solenoid shooterPusher = new Solenoid(0);
-	public static Solenoid lowHeightSolenoid = new Solenoid(1);
-	public static Solenoid highHeightSolenoid = new Solenoid(2);
+	public static DoubleSolenoid heightSolenoid = new DoubleSolenoid(1,2);
 
 	public static DifferentialDrive robotDrive = new DifferentialDrive(leftMotorController, rightMotorController);
 }

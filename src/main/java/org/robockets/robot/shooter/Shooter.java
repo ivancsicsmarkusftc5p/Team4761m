@@ -1,5 +1,6 @@
 package org.robockets.robot.shooter;
 
+import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import org.robockets.robot.RobotMap;
 
@@ -25,20 +26,16 @@ public class Shooter extends Subsystem {
 	public void setHeight(Height height) {
 		switch (height) {
 			case BOTTOM:
-				RobotMap.lowHeightSolenoid.set(false);
-				RobotMap.highHeightSolenoid.set(false);
+				RobotMap.heightSolenoid.set(DoubleSolenoid.Value.kOff);
 				break;
 			case LOW:
-				RobotMap.lowHeightSolenoid.set(true);
-				RobotMap.highHeightSolenoid.set(false);
+				RobotMap.heightSolenoid.set(DoubleSolenoid.Value.kReverse);
 				break;
 			case HIGH:
-				RobotMap.lowHeightSolenoid.set(false);
-				RobotMap.highHeightSolenoid.set(true);
+				RobotMap.heightSolenoid.set(DoubleSolenoid.Value.kForward);
 				break;
 			default:
-				RobotMap.lowHeightSolenoid.set(false);
-				RobotMap.highHeightSolenoid.set(false);
+				RobotMap.heightSolenoid.set(DoubleSolenoid.Value.kOff);
 		}
 	}
 
