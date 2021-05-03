@@ -11,12 +11,12 @@ import org.robockets.robot.shooter.SpinSpinners;
 public class OI {
 	public static Joystick joystick = new Joystick(0);
 
-	public static Button aButton = new JoystickButton(joystick, 0);
-	public static Button bButton = new JoystickButton(joystick, 1);
-	public static Button yButton = new JoystickButton(joystick, 3);
+	public static Button aButton = new JoystickButton(joystick, 1);
+	public static Button bButton = new JoystickButton(joystick, 2);
+	public static Button yButton = new JoystickButton(joystick, 4);
 
-	public static Button leftBumper = new JoystickButton(joystick, 4);
-	public static Button rightBumper = new JoystickButton(joystick, 5);
+	public static Button leftBumper = new JoystickButton(joystick, 5);
+	public static Button rightBumper = new JoystickButton(joystick, 6);
 
 	public OI() {
 		aButton.whenPressed(new SetHeight(Height.BOTTOM));

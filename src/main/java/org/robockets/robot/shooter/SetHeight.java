@@ -12,6 +12,7 @@ public class SetHeight extends Command {
 	}
 
 	protected void initialize() {
+		System.out.println("Height set to " + height);
 		Robot.shooter.setHeight(height);
 	}
 

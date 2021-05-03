@@ -24,6 +24,7 @@ public class Shooter extends Subsystem {
 	}
 
 	public void setHeight(Height height) {
+		System.out.println("Set height to: " + height.toString());
 		switch (height) {
 			case BOTTOM:
 				RobotMap.heightSolenoid.set(DoubleSolenoid.Value.kOff);

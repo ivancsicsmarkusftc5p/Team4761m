@@ -3,6 +3,7 @@ package org.robockets.robot;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
+import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import org.robockets.robot.drivetrain.Drivetrain;
 import org.robockets.robot.drivetrain.Joyride;
 import org.robockets.robot.shooter.Shooter;
@@ -39,7 +40,9 @@ public class Robot extends IterativeRobot {
     }
 
     @Override
-    public void testInit() { }
+    public void testInit() {
+	    LiveWindow.add(RobotMap.frontLeftMotorController);
+    }
 
 
     @Override
