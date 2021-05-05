@@ -12,8 +12,10 @@ public class RobotMap {
 	public static Victor shooterFront = new Victor(0);
 	public static Victor shooterBack = new Victor(2);
 
-	public static Solenoid shooterPusher = new Solenoid(0);
-	public static DoubleSolenoid heightSolenoid = new DoubleSolenoid(1,2);
+	public static DoubleSolenoid shooterPusher = new DoubleSolenoid(1,0);
+	public static DoubleSolenoid heightSolenoid = new DoubleSolenoid(2,3);
+
+	public static Compressor compressor = new Compressor();
 
 	public static RobotDrive robotDrive = new RobotDrive(frontLeftMotorController,backLeftMotorController,frontRightMotorController,backRightMotorController);
 

@@ -16,28 +16,19 @@ public class Shooter extends Subsystem {
 	}
 
 	public void shoot() {
-		RobotMap.shooterPusher.set(true);
+		RobotMap.shooterPusher.set(DoubleSolenoid.Value.kReverse);
 	}
 
 	public void release() {
-		RobotMap.shooterPusher.set(false);
+		RobotMap.shooterPusher.set(DoubleSolenoid.Value.kForward);
 	}
 
-	public void setHeight(Height height) {
-		System.out.println("Set height to: " + height.toString());
-		switch (height) {
-			case BOTTOM:
-				RobotMap.heightSolenoid.set(DoubleSolenoid.Value.kOff);
-				break;
-			case LOW:
-				RobotMap.heightSolenoid.set(DoubleSolenoid.Value.kReverse);
-				break;
-			case HIGH:
-				RobotMap.heightSolenoid.set(DoubleSolenoid.Value.kForward);
-				break;
-			default:
-				RobotMap.heightSolenoid.set(DoubleSolenoid.Value.kOff);
-		}
+	public void heightUp() {
+		RobotMap.heightSolenoid.set(DoubleSolenoid.Value.kForward);
+	}
+
+	public void heightDown() {
+		RobotMap.heightSolenoid.set(DoubleSolenoid.Value.kReverse);
 	}
 
 }

@@ -24,6 +24,8 @@ public class Robot extends IterativeRobot {
 
     	joyride = new Joyride();
 
+    	RobotMap.shooterBack.setInverted(true);
+
 
     	oi = new OI();
     }
@@ -41,7 +43,8 @@ public class Robot extends IterativeRobot {
 
     @Override
     public void testInit() {
-	    LiveWindow.add(RobotMap.frontLeftMotorController);
+	    LiveWindow.add(RobotMap.heightSolenoid);
+	    LiveWindow.add(RobotMap.shooterPusher);
     }
 
 
